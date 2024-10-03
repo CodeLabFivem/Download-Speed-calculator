@@ -3,63 +3,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #2D3748; /* Primary Dark Slate */
-    color: #E2E8F0; /* Light text for readability */
+    background: linear-gradient(135deg, #4A5568, #2D3748);
+    color: #E2E8F0;
+    font-size: 16px; /* Increased base font size */
 }
 
-/* Container Styling */
 .container {
-    background-color: #4A5568; /* Secondary Slate Gray */
+    background: #4A5568; /* Dark Slate Background */
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 350px;
-    text-align: center;
+    border-radius: 20px; /* Rounded corners for the container */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    width: 100%;
+    max-width: 400px; /* Set a max width */
+    text-align: center; /* Center-align text */
 }
 
 h2 {
     margin-bottom: 20px;
     color: #E2E8F0;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
 }
 
-/* Input Styling */
 input, select {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     margin: 10px 0;
-    border-radius: 6px;
-    border: none;
-    background-color: #2D3748; /* Primary Color */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #38B2AC; /* Light border */
+    background-color: #2D3748; /* Slightly darker background */
     color: #E2E8F0;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 input:focus, select:focus {
-    background-color: #1A202C; /* Slightly darker on focus */
+    background-color: #1A202C; /* Darker on focus */
     outline: none;
+    border-color: #38B2AC; /* Teal border on focus */
 }
 
-/* Button Styling */
 button {
     background-color: #38B2AC; /* Accent Teal */
     color: white;
-    padding: 12px;
+    padding: 15px;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px; /* Rounded corners */
     cursor: pointer;
     width: 100%;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -67,10 +68,53 @@ button:hover {
     background-color: #319795; /* Slightly darker teal on hover */
 }
 
-/* Result Styling */
 p#result {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #E2E8F0; /* Light text */
+}
+
+.loading {
+    display: none;
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-left-color: #38B2AC; /* Accent Color */
+    border-radius: 50%;
+    width: 30px; /* Slightly larger spinner */
+    height: 30px; /* Slightly larger spinner */
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#myChart {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.clear-button {
+    background-color: #E53E3E; /* Red for clear */
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
 }
