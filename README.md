@@ -3,8 +3,8 @@
 ## Table of Contents
 - [Overview](#Overview)
 - [Features](#Features)
-- [Tech Stack](#TechStack)
-- [How to Use](#HowtoUse)
+- [TechStack](#TechStack)
+- [HowtoUse](#HowtoUse)
 - [Example](#Example)
 - [Deployment](#Deployment)
 - [Customization](#Customization)
