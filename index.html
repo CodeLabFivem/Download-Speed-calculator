@@ -9,27 +9,34 @@
 <body>
     <div class="container">
         <h2>Download Time Calculator</h2>
-        <form id="speedForm">
-            <!-- Speed Input -->
-            <input type="number" id="speed" placeholder="Enter your internet speed" required>
-            <select id="speedUnit">
-                <option value="Kbps">Kbps</option>
-                <option value="Mbps" selected>Mbps</option>
-                <option value="Gbps">Gbps</option>
-            </select>
-            
-            <!-- File Size Input -->
-            <input type="number" id="size" placeholder="Enter file size" required>
-            <select id="sizeUnit">
-                <option value="KB">KB</option>
-                <option value="MB" selected>MB</option>
-                <option value="GB">GB</option>
-            </select>
-            
-            <button type="submit">Calculate</button>
-        </form>
-        <p id="result"></p>
+        <div class="card-container">
+            <div class="card">
+                <form id="speedForm">
+                    <input type="number" id="speed" placeholder="Enter speed" required>
+                    <select id="speedUnit">
+                        <option value="Kbps">Kbps</option>
+                        <option value="Mbps" selected>Mbps</option>
+                        <option value="Gbps">Gbps</option>
+                    </select>
+                    <input type="number" id="size" placeholder="Enter file size" required>
+                    <select id="sizeUnit">
+                        <option value="KB">KB</option>
+                        <option value="MB" selected>MB</option>
+                        <option value="GB">GB</option>
+                    </select>
+                    <button type="submit">Calculate</button>
+                    <div id="loading" class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                    <p id="result"></p>
+                    <button type="button" id="copyButton" style="display:none;">Copy Result</button>
+                    <button type="button" id="clearButton" class="clear-button">Clear History</button>
+                </form>
+            </div>
+        </div>
+        <canvas id="myChart"></canvas>
     </div>
+
 
     <script src="script.js" ></script>
 </body>
