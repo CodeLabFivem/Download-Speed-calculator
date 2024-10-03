@@ -21,13 +21,13 @@ The Download Speed Calculator is a web-based tool that allows users to estimate 
 - Minimalist Design: A sleek user interface with dark tones and modern design.
 - Responsive: Works on various screen sizes.
 
-## Tech Stack
+## TechStack
 - HTML: Web page structure.
 - CSS: Styling with a minimalist theme.
 - JavaScript: Time calculation logic.
 - Vercel: Deployed and hosted on Vercel for easy access.
 
-## How to Use
+## HowtoUse
 1. Open the application here: https://download-speed-calculator.vercel.app
 2. Input:
    - Your internet speed and select its unit (Kbps, Mbps, Gbps).
